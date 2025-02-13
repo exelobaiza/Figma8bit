@@ -1,0 +1,12 @@
+{
+  "name": "8-Bit Pixel Art Converter",
+  "id": "figma-8bit-pixel-art",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  },
+  "permissions": ["currentuser"]
+} 
