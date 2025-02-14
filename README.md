@@ -1,57 +1,57 @@
-# 8-Bit Pixel Art Converter for Figma
+<img src="./fd.png" height="80" style="display: table; margin: 0 auto;"/>
 
-A Figma plugin that converts your images into beautiful 8-bit pixel art style, complete with authentic retro color palettes.
+[![Actions Status](https://github.com/ahkohd/FigmaDither/workflows/check-production-build/badge.svg)](https://github.com/ahkohd/FigmaDither/workflows/check-production-build/badge.svg)
+
+Add dithering effects to your images right there in Figma
 
 ## Features
 
-- Convert any image into pixel art using nearest-neighbor scaling
-- Choose from classic retro color palettes:
-  - NES (52 colors)
-  - Game Boy (4 colors)
-  - SNES (256 colors)
-- Adjustable pixel size (2px to 16px)
-- Live preview of the effect
-- Export options:
-  - Apply directly to the selected image
-  - Export as a new PNG layer
+- Live preview
+- Easy to use UI
+- Grayscale image processing support
+- Uses WebWorker for fast image processing
+- Multiple dithering at once with multiple item selection
+- Dither or process each channel (R, G and B) separately, producing interesting effects
+- Fine-tune your image dithering with color replacement options
+- Easy toggle between the original or dithered image, or keep both
 
-## How to Use
+### Demo
 
-1. Install the plugin in Figma
-2. Select a rectangle with an image fill
-3. Run the plugin
-4. Choose your desired settings:
-   - Select a color palette (NES, Game Boy, or SNES)
-   - Adjust the pixel size using the slider
-   - Preview the effect in real-time
-5. Click "Apply Effect" to modify the selected image
-   OR
-   Click "Export PNG" to create a new layer with the effect
+![Dither in Action](./demo-naruto.gif)
+
+![Dithered Image 🔥](./dither-shot.png)
+
+[check out another demo](./demo.gif)
 
 ## Development
 
-To modify or build the plugin:
+First clone this repository.
 
-1. Clone this repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run watch
-   ```
-4. Open Figma -> Plugins -> Development -> Import plugin from manifest...
-5. Select the manifest.json file from this project
+```bash
+$ git clone https://github.com/aaroniker/FigmaDither.git
+$ cd FigmaDither
+```
 
-## Technical Details
+Install dependencies & build files to start local development.
 
-The plugin uses nearest-neighbor interpolation for authentic pixel art scaling and implements color quantization using the selected retro palette. The process involves:
+```bash
+$ pnpm install
+$ pnpm dev
+```
 
-1. Scaling down the image to the desired pixel size
-2. Mapping each color to the nearest color in the chosen palette
-3. Scaling back up with nearest-neighbor interpolation for crisp pixels
+## Resources
 
-## License
+Stuffs I find helpful when developing `FigmaDither` are as follows:
 
-MIT License - feel free to modify and use this plugin as you like! 
+- [coding challenge #90: Floyd-Steinberg dithering](https://www.youtube.com/watch?v=0L2n8Tg2FwI)
+- [canvas-dither by @ticky](https://github.com/ticky/canvas-dither)
+- [Wikipedia](https://en.wikipedia.org/wiki/Dither)
+- [Figma plugin docs](https://www.figma.com/plugin-docs/intro/)
+
+## LICENSE
+
+[MIT](./LICENSE.md)
+
+## ☕️ Donate
+
+<a href="https://www.buymeacoffee.com/jwlE0N8" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>

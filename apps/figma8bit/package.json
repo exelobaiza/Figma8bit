@@ -1,0 +1,23 @@
+{
+  "name": "figma8bit",
+  "tagline": "Transform your designs into 8-bit art!",
+  "description": "Add a retro touch to your designs with Figma8Bit! This plugin turns any image into an 8-bit style masterpiece.",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite build --watch --config vite.config.js",
+    "test": "vitest",
+    "build": "vite build",
+    "lint": "tsc",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.58.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vitest": "^0.28.4"
+  },
+  "dependencies": {
+    "pixelize": "*"
+  },
+  "license": "MIT"
+}

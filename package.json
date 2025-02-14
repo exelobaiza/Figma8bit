@@ -1,16 +1,9 @@
 {
-  "name": "figma-8bit-pixel-art",
-  "version": "1.0.0",
-  "description": "A Figma plugin that converts images into 8-bit pixel art style",
-  "main": "code.js",
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "watch": "tsc -p tsconfig.json --watch"
-  },
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@figma/plugin-typings": "^1.82.0",
-    "typescript": "^5.3.3"
-  }
-} 
+  "name": "image-to-pixel-art",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "private": true,
+  "license": "MIT"
+}
