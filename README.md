@@ -1,57 +1,59 @@
-<img src="./fd.png" height="80" style="display: table; margin: 0 auto;"/>
+# Figma 8-bit Image Converter
 
-[![Actions Status](https://github.com/ahkohd/FigmaDither/workflows/check-production-build/badge.svg)](https://github.com/ahkohd/FigmaDither/workflows/check-production-build/badge.svg)
+A Figma plugin that transforms your images into retro 8-bit style pixelated art with customizable pixel sizes.
 
-Add dithering effects to your images right there in Figma
+<img src="pluginCover.png"/>
 
 ## Features
 
-- Live preview
-- Easy to use UI
-- Grayscale image processing support
-- Uses WebWorker for fast image processing
-- Multiple dithering at once with multiple item selection
-- Dither or process each channel (R, G and B) separately, producing interesting effects
-- Fine-tune your image dithering with color replacement options
-- Easy toggle between the original or dithered image, or keep both
+- 🎮 Convert images to 8-bit pixel art style
+- 🔧 Customize pixel size for different effects
+- 🖼️ Support for multiple image formats
+- 🎨 Maintain color palette authenticity
+- ⚡ Batch conversion support
+- 🔄 Real-time preview
 
-### Demo
+## How It Works
 
-![Dither in Action](./demo-naruto.gif)
+The plugin takes your selected images in Figma and applies an 8-bit pixelation effect, allowing you to:
+- Choose your desired pixel size
+- Preview the result before applying
+- Convert multiple images at once
+- Maintain aspect ratio while pixelating
 
-![Dithered Image 🔥](./dither-shot.png)
+## Installation
 
-[check out another demo](./demo.gif)
+1. Open Figma
+2. Go to Menu > Plugins > Development > Import plugin from manifest
+3. Select the manifest.json file from this project
+
+## Usage
+
+1. Select an image or multiple images in Figma
+2. Run the plugin
+3. Choose your desired pixel size using the slider
+4. Preview the result
+5. Click "Apply" to convert your images
+
+## Technical Details
+
+- Built with Figma Plugin API
+- Uses image processing algorithms for pixelation
+- Supports various image formats
+- Optimized for performance with large images
 
 ## Development
 
-First clone this repository.
+The plugin consists of:
+- `code.js`: Main plugin logic for image processing
+- `ui.html`: Plugin UI interface with pixel size controls
+- `manifest.json`: Plugin configuration
 
-```bash
-$ git clone https://github.com/aaroniker/FigmaDither.git
-$ cd FigmaDither
-```
+### Storage Structure
 
-Install dependencies & build files to start local development.
-
-```bash
-$ pnpm install
-$ pnpm dev
-```
-
-## Resources
-
-Stuffs I find helpful when developing `FigmaDither` are as follows:
-
-- [coding challenge #90: Floyd-Steinberg dithering](https://www.youtube.com/watch?v=0L2n8Tg2FwI)
-- [canvas-dither by @ticky](https://github.com/ticky/canvas-dither)
-- [Wikipedia](https://en.wikipedia.org/wiki/Dither)
-- [Figma plugin docs](https://www.figma.com/plugin-docs/intro/)
-
-## LICENSE
-
-[MIT](./LICENSE.md)
-
-## ☕️ Donate
-
-<a href="https://www.buymeacoffee.com/jwlE0N8" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+```javascript
+pageStatuses: {
+  [pageId]: {
+    status: string
+  }
+}
